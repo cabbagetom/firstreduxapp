@@ -19,3 +19,14 @@ font-size: 1.5rem;
 margin: 2rem;
 width: 10rem;
 }
+
+.Form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.Form > button {
+  font-size: 1.5rem;
+}
