@@ -8,21 +8,25 @@ export const counterSlice = createSlice({
     },
     reducers: {
 
-            increment: (state) => {
-                state.value += 1;
+            addition: (state) => {
+                state.value = 0 ? state.value = 0 :  (state.value > 0 ? state.value = (state.value * 1.05) : state.value = state.value);
             },
 
-            decrement: (state) => {
-                state.value -= 1;
+            charge: (state) => {
+                state.value = 0 ? state.value = 0 :  (state.value > 0 ? state.value = (state.value * 0.85) : state.value = state.value);
             },
 
-            incrementByAmount: (state, action) => {
+            deposit: (state, action) => {
                 state.value += action.payload;
+            },
+
+            withdraw: (state, action) => {
+                state.value -= action.payload;
             },
     },
 });
 
-export const {increment, decrement, incrementByAmount, resetValuetoZero} =
+export const {addition, charge, deposit, withdraw, resetValuetoZero} =
 
     counterSlice.actions;
 
